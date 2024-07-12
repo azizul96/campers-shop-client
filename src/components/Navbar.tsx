@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { BsFillBookmarkStarFill } from "react-icons/bs";
 import { FaBars, FaHome, FaPlus } from "react-icons/fa";
-import { FaXmark } from "react-icons/fa6";
+import { FaCartShopping, FaXmark } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -12,13 +12,17 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-[#1ca8b2] rounded-full">
+    <nav className="bg-[#1ca8b2] rounded-t-2xl">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between flex-row-reverse ">
           <div className="flex items-center">
             <div className=" flex-shrink-0">
-              <Link to="/" className="text-white text-2xl  font-bold">
-                Blogs
+              <Link
+                to="/cart"
+                className="text-white hover:text-black font-bold flex justify-center items-center gap-1"
+              >
+                Cart
+                <FaCartShopping />
               </Link>
             </div>
           </div>
@@ -26,24 +30,24 @@ const Navbar = () => {
             <div className="ml-4 flex items-center space-x-4 font-semibold">
               <Link
                 to="/"
-                className="text-white hover:bg-white hover:text-black rounded-lg p-2 flex justify-center items-center gap-1"
+                className="text-white  hover:text-black rounded-lg p-2 flex justify-center items-center gap-1"
               >
                 <FaHome />
                 Home
               </Link>
               <Link
                 to="/add-blog"
-                className="text-white hover:bg-white hover:text-black rounded-lg p-2 flex justify-center items-center gap-1"
-              >
-                <FaPlus />
-                Add Blog
-              </Link>
-              <Link
-                to="/favorites"
-                className="text-white hover:bg-white hover:text-black rounded-lg p-2 flex justify-center items-center gap-1"
+                className="text-white  hover:text-black rounded-lg p-2 flex justify-center items-center gap-1"
               >
                 <BsFillBookmarkStarFill />
                 Favorites
+              </Link>
+              <Link
+                to="/favorites"
+                className="text-white  hover:text-black rounded-lg p-2 flex justify-center items-center gap-1"
+              >
+                <FaPlus />
+                About Us
               </Link>
             </div>
           </div>
