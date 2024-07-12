@@ -36,14 +36,21 @@ const Navbar = () => {
                 Home
               </Link>
               <Link
-                to="/add-blog"
+                to="/products"
                 className="text-white  hover:text-black rounded-lg p-2 flex justify-center items-center gap-1"
               >
                 <BsFillBookmarkStarFill />
-                Favorites
+                Products
               </Link>
               <Link
-                to="/favorites"
+                to="/wishlist"
+                className="text-white  hover:text-black rounded-lg p-2 flex justify-center items-center gap-1"
+              >
+                <FaPlus />
+                Wishlist
+              </Link>
+              <Link
+                to="/about"
                 className="text-white  hover:text-black rounded-lg p-2 flex justify-center items-center gap-1"
               >
                 <FaPlus />
@@ -73,19 +80,26 @@ const Navbar = () => {
             </Link>
 
             <Link
-              to="/add-blog"
-              className="text-white hover:bg-white hover:text-black rounded-lg p-2 flex justify-start items-center gap-1"
-            >
-              <FaPlus />
-              Add Blog
-            </Link>
-
-            <Link
-              to="/favorites"
+              to="/products"
               className="text-white hover:bg-white hover:text-black rounded-lg p-2 flex justify-start items-center gap-1"
             >
               <BsFillBookmarkStarFill />
-              Favorites
+              Products
+            </Link>
+
+            <Link
+              to="/wishlist"
+              className="text-white hover:bg-white hover:text-black rounded-lg p-2 flex justify-start items-center gap-1"
+            >
+              <FaPlus />
+              Wishlist
+            </Link>
+            <Link
+              to="/about"
+              className="text-white hover:bg-white hover:text-black rounded-lg p-2 flex justify-start items-center gap-1"
+            >
+              <FaPlus />
+              About Us
             </Link>
           </div>
         </div>
