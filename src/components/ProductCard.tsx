@@ -1,11 +1,16 @@
-const ProductCard = () => {
+import { Product } from "../typings/types";
+
+type ProductCardProps = {
+  product: Product;
+};
+
+const ProductCard = ({ product }: ProductCardProps) => {
   return (
-    <div className="flex max-w-md overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800">
+    <div className="flex  overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800">
       <div
         className="w-1/3 bg-cover"
         style={{
-          backgroundImage:
-            "url(https://images.unsplash.com/photo-1494726161322-5360d4d0eeae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80)",
+          backgroundImage: `url(${product.images})`,
         }}
       ></div>
 

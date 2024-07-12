@@ -14,7 +14,7 @@ type Product = {
   stock: number;
   description: string;
   ratings: number;
-  images: string[];
+  images: string;
 };
 
 type ProductState = {
@@ -36,7 +36,9 @@ export const fetchProducts = createAsyncThunk<
   { rejectValue: SerializedError }
 >("product/fetchProducts", async (_, { rejectWithValue }) => {
   try {
-    const response = await axios.get<Product[]>("/api/products");
+    const response = await axios.get<Product[]>(
+      "http://localhost:5000/api/products"
+    );
     return response.data;
   } catch (err) {
     return rejectWithValue(err as SerializedError);
