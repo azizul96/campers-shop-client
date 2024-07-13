@@ -89,10 +89,14 @@ const Carts = () => {
           </tbody>
           {/* foot */}
         </table>
-        <div className=" ">
-          <h2>{totalPrice.toFixed(2)}</h2>
+        <div className=" flex flex-col md:flex-row justify-evenly items-center my-10">
+          <h2 className="text-3xl font-bold">
+            Total Price: ${totalPrice.toFixed(2)}
+          </h2>
           <Link to="/checkout">
-            <button>Checkout</button>
+            <button className="bg-green-500 text-white font-bold px-5 py-2 rounded-md">
+              Checkout
+            </button>
           </Link>
         </div>
       </div>

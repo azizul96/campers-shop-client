@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { BsFillBookmarkStarFill } from "react-icons/bs";
-import { FaBars, FaHome, FaPlus } from "react-icons/fa";
+import { AiFillProduct } from "react-icons/ai";
+import { FaBars, FaHome } from "react-icons/fa";
 import { FaCartShopping, FaXmark } from "react-icons/fa6";
+import { IoIosInformationCircle } from "react-icons/io";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -39,21 +40,15 @@ const Navbar = () => {
                 to="/products"
                 className="text-white  hover:text-black rounded-lg p-2 flex justify-center items-center gap-1"
               >
-                <BsFillBookmarkStarFill />
+                <AiFillProduct />
                 Products
               </Link>
-              <Link
-                to="/wishlist"
-                className="text-white  hover:text-black rounded-lg p-2 flex justify-center items-center gap-1"
-              >
-                <FaPlus />
-                Wishlist
-              </Link>
+
               <Link
                 to="/about"
                 className="text-white  hover:text-black rounded-lg p-2 flex justify-center items-center gap-1"
               >
-                <FaPlus />
+                <IoIosInformationCircle />
                 About Us
               </Link>
             </div>
@@ -83,22 +78,15 @@ const Navbar = () => {
               to="/products"
               className="text-white hover:bg-white hover:text-black rounded-lg p-2 flex justify-start items-center gap-1"
             >
-              <BsFillBookmarkStarFill />
+              <AiFillProduct />
               Products
             </Link>
 
             <Link
-              to="/wishlist"
-              className="text-white hover:bg-white hover:text-black rounded-lg p-2 flex justify-start items-center gap-1"
-            >
-              <FaPlus />
-              Wishlist
-            </Link>
-            <Link
               to="/about"
               className="text-white hover:bg-white hover:text-black rounded-lg p-2 flex justify-start items-center gap-1"
             >
-              <FaPlus />
+              <IoIosInformationCircle />
               About Us
             </Link>
           </div>
