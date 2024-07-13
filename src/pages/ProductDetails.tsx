@@ -25,7 +25,7 @@ const ProductDetails = () => {
   useEffect(() => {
     const fetchProduct = async () => {
       const response = await axios.get(
-        `http://localhost:5000/api/products/${id}`
+        `https://campers-shop-server-tau.vercel.app/api/products/${id}`
       );
       setProduct(response.data);
     };
@@ -65,7 +65,11 @@ const ProductDetails = () => {
   };
   //
   if (!product) {
-    return <div>Loading...</div>;
+    return (
+      <div className="text-3xl font-bold text-center py-20">
+        <h1>Loading...</h1>
+      </div>
+    );
   }
 
   return (

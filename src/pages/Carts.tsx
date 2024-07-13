@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../redux/hook";
 import {
   removeFromCart,
@@ -55,11 +56,12 @@ const Carts = () => {
                   <div className="font-bold">{item.name}</div>
                 </td>
                 <td>
-                  <div className="font-bold">${totalPrice.toFixed(2)}</div>
+                  <div className="font-bold">${item.price}</div>
                 </td>
                 <td>
                   <div className="">
                     <input
+                      className="border-2  rounded-lg text-center"
                       type="number"
                       value={item.quantity}
                       min="1"
@@ -74,8 +76,12 @@ const Carts = () => {
                   </div>
                 </td>
                 <th>
-                  <button className="btn btn-ghost btn-xs">details</button>
-                  <button className="btn btn-ghost btn-xs">details</button>
+                  <button
+                    onClick={() => handleRemove(item.productId)}
+                    className="bg-red-600 text-white px-2 py1 rounded-lg shadow-lg "
+                  >
+                    Remove
+                  </button>
                 </th>
               </tr>
             ))}
@@ -83,6 +89,12 @@ const Carts = () => {
           </tbody>
           {/* foot */}
         </table>
+        <div className=" ">
+          <h2>{totalPrice.toFixed(2)}</h2>
+          <Link to="/checkout">
+            <button>Checkout</button>
+          </Link>
+        </div>
       </div>
     </div>
   );
