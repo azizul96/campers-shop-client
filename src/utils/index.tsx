@@ -1,17 +1,27 @@
-export const navOptions = [
-  {
-    id: "home",
-    label: "Home",
-    path: "/",
-  },
-  {
-    id: "listing",
-    label: "Products",
-    path: "/product",
-  },
-  {
-    id: "aboutUs",
-    label: "About Us",
-    path: "/about-us",
-  },
-];
+import { PulseLoader } from "react-spinners";
+
+type ComponentLevelLoaderProps = {
+  text: string;
+  color: string;
+  loading: boolean;
+  size?: number;
+};
+
+export default function ComponentLevelLoader({
+  text,
+  color,
+  loading,
+  size,
+}: ComponentLevelLoaderProps) {
+  return (
+    <span className="flex gap-1 items-center">
+      {text}
+      <PulseLoader
+        color={color}
+        loading={loading}
+        size={size || 10}
+        data-testid="loader"
+      />
+    </span>
+  );
+}
