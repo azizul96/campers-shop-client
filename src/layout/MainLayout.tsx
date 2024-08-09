@@ -5,10 +5,12 @@ import Header from "../components/Header";
 
 const MainLayout = () => {
   return (
-    <div className=" container mx-auto px-2">
-      <Header />
-      <Navbar />
-      <Outlet />
+    <div>
+      <div className=" container mx-auto px-2">
+        <Header />
+        <Navbar />
+        <Outlet />
+      </div>
       <Footer />
     </div>
   );

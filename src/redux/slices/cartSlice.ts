@@ -5,9 +5,9 @@ type CartItem = {
   productId: string;
   name: string;
   price: number;
-  quantity: number;
   stock: number;
   images: string;
+  quantity: number;
 };
 
 type CartState = {
@@ -47,10 +47,14 @@ const cartSlice = createSlice({
         item.quantity = Math.min(Math.max(quantity, 1), item.stock);
       }
     },
+    clearCart: (state) => {
+      state.items = [];
+    },
   },
 });
 
-export const { addToCart, removeFromCart, updateQuantity } = cartSlice.actions;
+export const { addToCart, removeFromCart, updateQuantity, clearCart } =
+  cartSlice.actions;
 
 export const selectCartItems = (state: RootState) => state.cart.items;
 

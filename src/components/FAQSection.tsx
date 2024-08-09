@@ -13,7 +13,9 @@ const FAQSection = () => {
 
   return (
     <>
-      <h2 className="text-center font-bold text-3xl my-5 ">FAQ</h2>
+      <h2 className="text-xl font-bold text-gray-950 sm:text-3xl my-5 text-center">
+        FAQ
+      </h2>
       <div className="space-y-2">
         {faqs.map((faq, index) => (
           <div key={index} className="collapse collapse-arrow bg-emerald-200">

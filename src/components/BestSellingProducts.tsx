@@ -5,9 +5,9 @@ import image3 from "../assets/images/kettle.webp";
 
 const BestSellingProducts = () => {
   return (
-    <section className="bg-white dark:bg-gray-900">
+    <section className="bg-white dark:bg-gray-900  my-20">
       <div className="container px-6 py-10 mx-auto">
-        <h1 className="text-center font-bold text-3xl my-5 ">
+        <h1 className="text-xl font-bold text-gray-950 sm:text-3xl uppercase text-center my-5 ">
           Explore Our <br /> Best Selling <span className="">Products</span>
         </h1>
 

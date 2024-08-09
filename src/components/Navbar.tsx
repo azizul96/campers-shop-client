@@ -3,6 +3,7 @@ import { AiFillProduct } from "react-icons/ai";
 import { FaBars, FaHome } from "react-icons/fa";
 import { FaCartShopping, FaXmark } from "react-icons/fa6";
 import { IoIosInformationCircle } from "react-icons/io";
+import { MdManageAccounts } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -45,11 +46,19 @@ const Navbar = () => {
               </Link>
 
               <Link
-                to="/about"
+                to="/about-us"
                 className="text-white  hover:text-black rounded-lg p-2 flex justify-center items-center gap-1"
               >
                 <IoIosInformationCircle />
                 About Us
+              </Link>
+
+              <Link
+                to="/product-manage"
+                className="text-white  hover:text-black rounded-lg p-2 flex justify-center items-center gap-1"
+              >
+                <MdManageAccounts />
+                Product Management
               </Link>
             </div>
           </div>
@@ -83,11 +92,19 @@ const Navbar = () => {
             </Link>
 
             <Link
-              to="/about"
+              to="/about-us"
               className="text-white hover:bg-white hover:text-black rounded-lg p-2 flex justify-start items-center gap-1"
             >
               <IoIosInformationCircle />
               About Us
+            </Link>
+
+            <Link
+              to="/product-manage"
+              className="text-white hover:bg-white hover:text-black rounded-lg p-2 flex justify-start items-center gap-1"
+            >
+              <MdManageAccounts />
+              Product Management
             </Link>
           </div>
         </div>

@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import { addToCart, selectCartItems } from "../redux/slices/cartSlice";
 import { GiShoppingCart } from "react-icons/gi";
+import toast from "react-hot-toast";
 
 type Product = {
   _id: string;
@@ -49,6 +50,7 @@ const ProductDetails = () => {
             images: product.images,
           })
         );
+        toast.success("Added Successfully!");
       }
     }
   };

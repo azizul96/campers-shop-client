@@ -1,4 +1,5 @@
 import { HiShoppingBag } from "react-icons/hi";
+import { Link } from "react-router-dom";
 
 const CategoriesSection = () => {
   //   const categories = [
@@ -12,7 +13,7 @@ const CategoriesSection = () => {
     <section className="categories">
       <div className="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8">
         <div className="text-center">
-          <h2 className="text-xl font-bold text-gray-950 sm:text-3xl">
+          <h2 className="text-xl font-bold text-gray-950 sm:text-3xl ">
             SHOP BY CATEGORY
           </h2>
         </div>
@@ -22,13 +23,15 @@ const CategoriesSection = () => {
               <img src="/Boots.webp" className="object-cover  aspect-square" />
               <div className="absolute inset-0 flex flex-col items-start justify-end p-6">
                 <h3 className="text-xl font-medium text-[#1ca8b2]">BOOTS</h3>
-                <button
-                  // onClick={() => router.push("/product/listing/kids")}
-                  className="mt-1.5 bg-black px-4 py-3 text-xs font-medium uppercase tracking-wide text-white flex items-center gap-1"
-                >
-                  Shop Now
-                  <HiShoppingBag />
-                </button>
+                <Link to="/products">
+                  <button
+                    // onClick={() => router.push("/product/listing/kids")}
+                    className="mt-1.5 bg-black px-4 py-3 text-xs font-medium uppercase tracking-wide text-white flex items-center gap-1"
+                  >
+                    Shop Now
+                    <HiShoppingBag />
+                  </button>
+                </Link>
               </div>
             </div>
           </li>
@@ -40,13 +43,15 @@ const CategoriesSection = () => {
               />
               <div className="absolute inset-0 flex flex-col items-start justify-end p-6">
                 <h3 className="text-xl font-medium text-[#1ca8b2]">WOMEN</h3>
-                <button
-                  // onClick={() => router.push("/product/listing/women")}
-                  className="mt-1.5  bg-black px-4 py-3 text-xs font-medium uppercase tracking-wide text-white flex items-center gap-1"
-                >
-                  Shop Now
-                  <HiShoppingBag />
-                </button>
+                <Link to="/products">
+                  <button
+                    // onClick={() => router.push("/product/listing/women")}
+                    className="mt-1.5  bg-black px-4 py-3 text-xs font-medium uppercase tracking-wide text-white flex items-center gap-1"
+                  >
+                    Shop Now
+                    <HiShoppingBag />
+                  </button>
+                </Link>
               </div>
             </div>
           </li>
@@ -58,13 +63,15 @@ const CategoriesSection = () => {
               />
               <div className="absolute inset-0 flex flex-col items-start justify-end p-6">
                 <h3 className="text-xl font-medium text-[#1ca8b2]">Bags</h3>
-                <button
-                  // onClick={() => router.push("/product/listing/men")}
-                  className="mt-1.5 bg-black px-4 py-3 text-xs font-medium uppercase tracking-wide text-white flex items-center gap-1"
-                >
-                  Shop Now
-                  <HiShoppingBag />
-                </button>
+                <Link to="/products">
+                  <button
+                    // onClick={() => router.push("/product/listing/men")}
+                    className="mt-1.5 bg-black px-4 py-3 text-xs font-medium uppercase tracking-wide text-white flex items-center gap-1"
+                  >
+                    Shop Now
+                    <HiShoppingBag />
+                  </button>
+                </Link>
               </div>
             </div>
           </li>

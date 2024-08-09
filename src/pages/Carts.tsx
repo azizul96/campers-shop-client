@@ -1,17 +1,36 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../redux/hook";
 import {
   removeFromCart,
   selectCartItems,
   updateQuantity,
 } from "../redux/slices/cartSlice";
+import Swal from "sweetalert2";
 
 const Carts = () => {
   const dispatch = useAppDispatch();
   const cartItems = useAppSelector(selectCartItems);
+  const navigate = useNavigate();
 
   const handleRemove = (productId: string) => {
-    dispatch(removeFromCart(productId));
+    Swal.fire({
+      title: "You want to remove ?",
+      text: "",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, remove it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        dispatch(removeFromCart(productId));
+        Swal.fire({
+          title: "Removed!",
+          text: "Item has been removed.",
+          icon: "success",
+        });
+      }
+    });
   };
 
   const handleQuantityChange = (productId: string, quantity: number) => {
@@ -22,6 +41,10 @@ const Carts = () => {
     (total, item) => total + item.price * item.quantity,
     0
   );
+
+  const handlePlaceOrder = () => {
+    navigate("/checkout");
+  };
 
   return (
     <div>
@@ -93,11 +116,13 @@ const Carts = () => {
           <h2 className="text-3xl font-bold">
             Total Price: ${totalPrice.toFixed(2)}
           </h2>
-          <Link to="/checkout">
-            <button className="bg-green-500 text-white font-bold px-5 py-2 rounded-md">
-              Checkout
-            </button>
-          </Link>
+          <button
+            className="bg-green-500 text-white font-bold px-5 py-2 rounded-md"
+            onClick={handlePlaceOrder}
+            disabled={totalPrice === 0}
+          >
+            Order Now
+          </button>
         </div>
       </div>
     </div>

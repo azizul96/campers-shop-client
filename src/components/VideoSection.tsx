@@ -2,7 +2,9 @@ import video1 from "../assets/videos/video.mp4";
 const VideoSection = () => {
   return (
     <>
-      <h2 className="text-center font-bold text-3xl my-5 ">OUR VALUES</h2>
+      <h2 className="text-xl font-bold text-gray-950 sm:text-3xl my-5 text-center ">
+        OUR VALUES
+      </h2>
       <div className="flex flex-col md:flex-row justify-between items-center gap-5 my-10 ">
         <div className="flex-1">
           <video

@@ -61,7 +61,7 @@ const Products = () => {
   };
 
   return (
-    <>
+    <div>
       <div className=" flex flex-col md:flex-row justify-between items-center my-5 gap-2">
         <input
           type="text"
@@ -106,7 +106,7 @@ const Products = () => {
           Reset
         </button>
       </div>
-      <h2 className="text-xl font-bold text-gray-950 sm:text-3xl text-center my-10">
+      <h2 className="text-xl font-bold text-gray-950 sm:text-3xl text-center my-10 uppercase">
         All Products
       </h2>
 
@@ -115,7 +115,7 @@ const Products = () => {
           <ProductCard key={product._id} product={product} />
         ))}
       </div>
-    </>
+    </div>
   );
 };
 

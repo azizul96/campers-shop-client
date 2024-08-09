@@ -17,3 +17,10 @@ export type CartItem = {
   stock: number;
   images: string;
 };
+
+export type OrderDetails = {
+  orderId: string;
+  items: { name: string; quantity: number; price: number }[];
+  total: number;
+  deliveryDate: string;
+};

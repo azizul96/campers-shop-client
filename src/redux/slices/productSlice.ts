@@ -37,7 +37,7 @@ export const fetchProducts = createAsyncThunk<
 >("product/fetchProducts", async (_, { rejectWithValue }) => {
   try {
     const response = await axios.get<Product[]>(
-      "https://campers-shop-server-tau.vercel.app/api/products"
+      "https://campers-shop-server-tau.vercel.app/api/products/"
     );
     return response.data;
   } catch (err) {
